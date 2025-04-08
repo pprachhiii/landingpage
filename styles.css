@@ -1,0 +1,257 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: #ff9900;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #0d6e6e;
+    padding: 0 20px;
+}
+.hero h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    max-width: 600px;
+}
+.button, .contact button {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+.button:hover, .contact button:hover {
+    background-color: #e68a00;
+    transform: scale(1.05);
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+.destinations, .services, .testimonials, .contact {
+    margin: 20px 0;
+}
+
+/* Grid Layouts */
+.destination-grid, .services-grid, .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Card Styles */
+.destination-item, .service-item, .testimonial-item {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.destination-item:hover,
+.service-item:hover,
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.destination-item h3,
+.service-item h3,
+.testimonial-item h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+.destination-item p,
+.service-item p,
+.testimonial-item p {
+    color: #555;
+}
+
+/* Images */
+.destinations img, .services img, .testimonials img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Services - Horizontal Icon Card Layout */
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.service-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.service-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.service-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #0d6e6e;
+}
+
+.service-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.testimonial-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ff9900;
+}
+.testimonial-item h3 {
+    margin-bottom: 8px;
+}
+.testimonial-item p {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Contact Section */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #ff9900;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero {
+        height: auto;
+        padding: 80px 20px;
+    }
+    .testimonial-item {
+        padding: 20px 15px;
+    }
+    .service-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-box img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .service-content h3 {
+        font-size: 1.2rem;
+    }
+
+}
